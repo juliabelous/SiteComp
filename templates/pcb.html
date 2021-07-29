@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<title>Компоненты 409</title>
+<link href="../static/lars_slider_1.ico" rel="shortcut icon" type="image/x-icon"/>
+<link href="../static/style.css" rel="stylesheet" type="text/css">
+</link>
+</head>
+<body>
+<header>
+<nav>
+<h1>Добро пожаловать в систему контроля и учета компонентов!</h1>
+</nav>
+<form action="http://192.168.0.103:3000/" method="action">
+<button><img height="30px" src="../static/home.ico" style="vertical-align: middle;"/>    Главная страница</button>
+</form>
+</header>
+<main>
+    <div class="Searching">
+    <p>Поиск компонентов по имени:
+              <form action="http://192.168.0.103:3000/search/" autofocus="autofocus" method="action">
+    <input autofocus="autofocus" name="comp" placeholder="Поиск по имени" type="search"/>
+    <input type="submit" value="Поиск">
+    <!-- <button onclick="window.location='http://192.168.0.103:3000/OK'">Поиск</button>-->
+    </input></form>
+    <p></p>
+    </p>
+    </div>
+<article>
+</article>
+<aside  class=tab>
+    <form action=http://192.168.0.103:3000/all/PCB/ method="action"></form>
+    <table>
+        <caption>ТАБЛИЦА КОМПОНЕНТОВ ПО ЗАПРОСУ: ПЕЧАТНЫЕ ПЛАТЫ</caption>
+        <tr><th>Код</th>
+            <th>НАИМЕНОВАНИЕ</th>
+            <th>ВЕРСИЯ</th>
+            <th>ДАТА</th>
+            <th>КОЛ-ВО</th>
+            <th>МЕСТО ХРАНЕНИЯ</th>            
+            <th>ССЫЛКА НА GITHUB</th>
+            <th>СПИСАТЬ/ВНЕСТИ</th>
+            <th>СПИСАНИЕ</th>
+            <th>ПРИМЕЧАНИЕ</th>
+        </tr>
+    </table>
+</aside>
+</main>
+</body>
+</html>

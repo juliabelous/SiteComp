@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <title>Компоненты 409</title>
+    <link rel="shortcut icon" href="../static/lars_slider_1.ico"  type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../static/style.css"/>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Добро пожаловать в систему контроля и учета компонентов!</h1>
+      </nav>
+      <form action="http://192.168.0.103:3000/" method="action">
+        <button><img src="../static/home.ico" style="vertical-align: middle;" height="30px">    Главная страница</button>
+      </form>
+    </header>
+    <main>
+      <div class="Searching">
+        <p>Поиск компонентов по имени:
+          <form action="http://192.168.0.103:3000/search/" method="action" autofocus="autofocus">
+              <input type="search" name="comp" placeholder="Поиск по имени"  autofocus="autofocus"> 
+              <input type="submit" value="Поиск"/>
+              <!-- <button onclick="window.location='http://127.0.0.1:5000/OK'">Поиск</button>-->
+          </form>
+	  <form action="http://192.168.0.103:3000/barCode" method="action" autofocus="autofocus">
+              <input type="submit" value="Узнать штрихкод"/>
+          </form>
+        <p>
+        </div>
+      <article>
+        
+      </article>
+
+
+      <!-- <table class=Infcomp> -->
+      <tr>
+      <td>
+
+
+      <aside class=tab>
+        <div class="NewCompText"><h2>Информация о новом компоненте</h2></div>
+            <form action=http://192.168.0.103:3000/new/ method="action">
+                <div class="NewComp">
+                <table>
+                    <tr>
+                        <th>Штрих код</th>
+                        <th>Номинал или маркировка</th>
+                        <th>Корпус</th>  
+                        <th>Количество</th>       
+                    </tr>
+                    <tr><td>
+                            <div class="InputWriteNew">
+                                <input type="search" name="barcode" pattern="^[ 0-9]+$" placeholder="Код" required autofocus="autofocus">
+                            </div>
+                        </td><td>
+                            <div class="InputWriteNew">    
+                                <input type="search" name="name" required placeholder="Наименование">
+                            </div>
+                        </td><td>
+                            <div class="InputWriteNew">
+                                <input type="search" name="body" required placeholder="Корпус">
+                            </div>
+                        </td>
+                        <td>
+                          <div class="InputWriteNew">
+                              <input type="search" name="pcs"  pattern="^[ 0-9]+$" required placeholder="Количество">
+                          </div>
+                        </td></tr>
+                      <tr>
+                        <th>Место хранения</th>
+                        <th>Тип компонента</th>
+                        <th>PART-номер</th>
+                        <th>Напряжение</th>
+                      </tr>
+                        <tr>
+                            <div class="InputWriteNew">
+                                <td><input type="search" name="place" required placeholder="Место хранения">
+                            </div>
+                        </td><td>
+                            <select name="type" required>
+                                <option value="R">Резисторы</option> 
+                                <option value="L">Индуктивность</option> 
+                                <option value="C">Емкость</option> 
+                                <option value="MC">Резисторы</option> 
+                                <option value="MSH">Микросхемы</option> 
+                                <option value="TR">Транзисторы</option> 
+                                <option value="D">Диоды</option> 
+                                <option value="O">Прочее</option> 
+                            </select>  
+                        </td>
+                        <td>
+                          <div class="InputWriteNew">
+                              <input type="search" name="part" required placeholder="PART-номер">
+                          </div>
+                        </td>
+                        <td>
+                          <div class="InputWriteNew">
+                              <input type="search" name="volt" required placeholder="Напряжение">
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                      <td colspan="6">
+                        <div class="InputPrim">
+                          <input type="search" name="prim" placeholder="Примечания">
+                        </div>
+                       </td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">
+                            <div class="InputBot"><input type="submit" value="Внести"/></div>
+                        </td>
+                    </tr>        
+                </table>
+            </div>
+            </form>
+          <!-- </body> -->
+      </aside>
+  <!-- </table> -->
+      </tr>
+      </td>
+      <!-- новые печатные платы -->
+      <p></p>
+      <table class=infpcb>
+      <tr>
+      <td>
+      <aside>
+        <div class="NewCompText">
+            <h2>Информация о новой печатной плате</h2></div>
+            <form action=http://127.0.0.1:5000/new/ method="action">
+                <div class="NewComp">
+                  <table>
+                      <tr>
+                          <th>Штрих код</th>
+                          <th>Номинал или маркировка</th>
+                          <th>Верисия</th>  
+                          <th>Количество</th>       
+                      </tr>
+                      <tr><td>
+                              <div class="InputWriteNew">
+                                  <input type="search" name="barcode" pattern="^[ 0-9]+$" placeholder="Код" required autofocus="autofocus">
+                              </div>
+                          </td><td>
+                              <div class="InputWriteNew">    
+                                  <input type="search" name="name" required placeholder="Наименование">
+                              </div>
+                          </td><td>
+                              <div class="InputWriteNew">
+                                  <input type="search" name="version" required placeholder="версия">
+                              </div>
+                          </td>
+                          <td>
+                            <div class="InputWriteNew">
+                                <input type="search" name="pcs"  pattern="^[ 0-9]+$" required placeholder="Кол-во">
+                            </div>
+                          </td></tr>
+                        <tr width=100%>
+                          <th>Место хранения</th>
+                          <th>Ссылка на Git</th>
+                          <th>Дата</th>
+                        </tr>
+                          <tr>
+                              <div class="InputWriteNew">
+                                  <td><input type="search" name="place" required placeholder="Место хранения">
+                              </div>
+                          </td><td>
+                            <input type="search" name="git" required placeholder="Ссылка">
+                          </td>
+
+                          <td>
+                            <div class="InputWriteNew">
+                                <input type="search" name="date" required placeholder="Дата">
+                            </div>
+                          </td>
+                      </tr>
+                      <tr>
+                        <td colspan="6">
+                          <div class="InputPrim">
+                            <input type="search" name="prim" placeholder="Примечания">
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td colspan="6">
+                              <div class="InputBot"><input type="submit" value="Внести"/></div>
+                          </td>
+                      </tr>        
+                  </table>
+            </div>
+            </form>
+          </body>
+      </aside>
+      </table>
+      </tr>
+      </td>
+ </body>
+    </main>
+    <footer>
+    </footer>
+  </body>

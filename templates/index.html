@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Компоненты 409</title>
+    <link rel="shortcut icon" href="../static/lars_slider_1.ico"  type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../static/style.css"/>
+    <script type="text/javascript" src="../static/script.js"></script>
+  </head>
+  <body onload="clockTimer();">
+    <header>
+      <nav>
+        <h1>Добро пожаловать в систему контроля и учета компонентов!
+          <!-- <div class="clockpage">
+          <span id="clock"></span>
+          <span id="dayOfWeek"></span>
+        </div> -->
+      </h1>
+      </nav>
+    </header>
+    <main>
+      <div class="Searching">
+      <p>Поиск компонентов по имени:
+        <form action="http://192.168.0.103:3000/search/" method="action" autofocus="autofocus">
+            <input type="search" name="comp" placeholder="Поиск по имени"  autofocus="autofocus"> 
+            <input type="submit" value="Поиск"/>
+            <!-- <button onclick="window.location='http://192.168.0.103:3000/OK'">Поиск</button>-->
+        </form>
+      <p>
+      </div>
+      <article>
+          <form action="http://192.168.0.103:3000/all/R" method="action">
+            <div class="allBot"><button>Резисторы</button></div>
+          </form>
+        <form action="http://192.168.0.103:3000/all/L" method="action">
+          <div class="allBot"><button>Индукутивности</button></div>
+        </form>
+        <form action="http://192.168.0.103:3000/all/C" method="action">
+          <div class="allBot"><button>Емкости</button></div>
+        </form>
+        <form action="http://192.168.0.103:3000/all/MC" method="action">
+          <div class="allBot"><button>Микроконтроллеры</button></div>
+        </form>
+        <form action="http://192.168.0.103:3000/all/MSH" method="action">
+          <div class="allBot"><button>Микросхемы</button></div>
+        </form>
+        <form action="http://192.168.0.103:3000/all/TR" method="action">
+          <div class="allBot"><button>Транзисторы</button></div>
+        </form>
+        <form action="http://192.168.0.103:3000/all/D" method="action">
+          <div class="allBot"><button>Диоды</button></div>
+        </form>
+        <form action="http://192.168.0.103:3000/all/PCB" method="action">
+          <div class="allBot"><button>Печатные платы</button></div>
+        </form>
+        <form action="http://192.168.0.103:3000/all/O" method="action">
+          <div class="allBot"><button>Прочие компоненты</button></div>
+        </form>
+        <form action="http://192.168.0.103:3000/new" method="action">
+          <div class="allBot"><button>Добавить новый элемент</button></div>
+        </form>
+      </article>
+      <aside>
+          </body>
+      </aside>
+    </main>
+    <footer>
+    </footer>
+  </body>
+</html>
